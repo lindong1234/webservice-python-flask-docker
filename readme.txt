@@ -14,6 +14,7 @@ pip install Flask
 Create a Flask application: You can create a Flask application in a file named app.py. In this file, you can define the routes and logic for your web service. Here's an example of a simple Flask application:
 python
 Copy code
+-----------
 from flask import Flask
 
 app = Flask(__name__)
