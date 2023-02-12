@@ -21,10 +21,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, World!"
+    return str("Hello, World!")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+#    app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)  # Start the flask application on IP 0.0.0.0 and port 5000
+
+
+-----------
 Create a Dockerfile: To build a Docker image for your Flask application, you can create a Dockerfile. A Dockerfile is a script that contains the instructions to build a Docker image. Here's an example of a Dockerfile for a Flask application:
 sql
 Copy code
