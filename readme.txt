@@ -27,16 +27,21 @@ if __name__ == "__main__":
 Create a Dockerfile: To build a Docker image for your Flask application, you can create a Dockerfile. A Dockerfile is a script that contains the instructions to build a Docker image. Here's an example of a Dockerfile for a Flask application:
 sql
 Copy code
+----------------
 FROM python:3.8-slim-buster
 
 WORKDIR /app
 COPY . /app
 
+pip freeze > requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
 CMD ["python", "app.py"]
+
+---------------
+
 Build the Docker image: To build the Docker image, you can run the following command in your terminal:
 Copy code
 docker build -t myimage .
@@ -45,3 +50,5 @@ css
 Copy code
 docker run -p 5000:5000 myimage
 Your Flask application should now be accessible at http://localhost:5000. You can now add more routes, logic, and database connectivity to build a full-fledged web service using object-oriented programming in Python with Flask and Docker.
+
+Running on http://127.0.0.1:5000
